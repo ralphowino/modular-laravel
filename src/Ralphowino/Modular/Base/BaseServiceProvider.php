@@ -20,7 +20,7 @@ class BaseServiceProvider extends ServiceProvider
         //Run if module is passed in arguements
         if ($module = $this->getModule(func_get_args()))
         {            
-            $this->autoloads($module,array('routes.php','filters.php','autoload.php'));
+            $this->autoloads($module,array('routes.php','filters.php','start.php'));
         }
     }
 
