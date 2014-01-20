@@ -5,7 +5,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Illuminate\Support\Facades\App;
 use webignition\JsonPrettyPrinter\JsonPrettyPrinter;
 
-class modulesInstall extends BaseCommand {
+class ModulesInstall extends BaseCommand {
 
 	/**
 	 * The console command name.

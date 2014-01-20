@@ -3,7 +3,7 @@
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
-class modulesCreate extends BaseCommand {
+class ModulesCreate extends BaseCommand {
 
 	/**
 	 * The console command name.
