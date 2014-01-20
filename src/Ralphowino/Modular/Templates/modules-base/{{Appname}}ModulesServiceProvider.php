@@ -11,15 +11,18 @@ class ModulesServiceProvider extends ServiceProvider
 
 	public function register()
 	{
-		$meta = file_get_contents(storage_path().'/meta/modules.json');
-		$meta = json_decode($meta,true);
-		if(isset($meta['service_providers']))
+		if(is_readable(storage_path().'/meta/modules.json'))
 		{
-			$providers = $meta['service_providers'];
-			foreach ($providers as $provider) {
-				$this->app->register($provider);
+			$meta = file_get_contents(storage_path().'/meta/modules.json');
+				$meta = json_decode($meta,true);
+				if(isset($meta['service_providers']))
+				{
+					$providers = $meta['service_providers'];
+					foreach ($providers as $provider) {
+						$this->app->register($provider);
+					}
+				}
 			}
-		}
 		
 	}
 }
