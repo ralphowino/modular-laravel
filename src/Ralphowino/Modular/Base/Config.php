@@ -29,7 +29,7 @@ class Config
 			$this->set_val($this->config, explode('.',$config),$value);
 		}	
 						
-		$this->config['modules_path'] = base_path().'/'.$this->config['folder'];	
+		$this->config['modules_path'] = $this->config['folder'];	
 		if(!array_key_exists('namespace',$this->config) || is_null($this->config['namespace']))
 		{
 			$this->config['namespace'] = ucfirst($this->config['appname']).'\Modules';
